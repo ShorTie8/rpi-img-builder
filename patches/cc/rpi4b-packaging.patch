@@ -30,9 +30,9 @@ diff -Naur a/scripts/package/builddeb b/scripts/package/builddeb
  fi
  
 +# install dtb and overlays
-+mkdir -p "$tmpdir/boot/broadcom/overlays"
-+cp -r "$tmpdir/usr/lib/raspberrypi-linux-image/broadcom/bcm2711-rpi-4-b.dtb" "$tmpdir/boot/broadcom/bcm2711-rpi-4-b.dtb"
-+cp -r "$tmpdir/usr/lib/raspberrypi-linux-image/overlays/" "$tmpdir/boot/broadcom/"
++mkdir -p "$tmpdir/boot/overlays"
++cp -r "$tmpdir/usr/lib/raspberrypi-linux-image/broadcom/bcm2711-rpi-4-b.dtb" "$tmpdir/boot/bcm2711-rpi-4-b.dtb"
++cp -r "$tmpdir/usr/lib/raspberrypi-linux-image/overlays/" "$tmpdir/boot/"
 +
  # Install the maintainer scripts
  # Note: hook scripts under /etc/kernel are also executed by official Debian
@@ -48,23 +48,23 @@ diff -Naur a/scripts/package/builddeb b/scripts/package/builddeb
 +
 +set -e
 +
-+if ls /boot/broadcom/ 2>/dev/null; then rm -fdr /boot/broadcom;
-+        else echo "Missing broadcom directory." &>/dev/null;
++if touch -c /boot/overlays /boot/*.dtb > /dev/null 2>&1; then rm -fdr /boot/overlays /boot/*.dtb;
++        else echo "Missing dtb files." &>/dev/null;
 +fi
 +
-+if ls /boot/System.map-* 2>/dev/null; then rm -f /boot/System.map-*;
++if ls /boot/System.map-* > /dev/null 2>&1; then rm -f /boot/System.map-*;
 +        else echo "Missing System.map file." &>/dev/null;
 +fi
 +
-+if ls /boot/config-* 2>/dev/null; then rm -f /boot/config-*;
++if ls /boot/config-* > /dev/null 2>&1; then rm -f /boot/config-*;
 +        else echo "Missing config file." &>/dev/null;
 +fi
 +
-+if ls /boot/vmlinuz-* 2>/dev/null; then rm -f /boot/vmlinuz-*;
++if ls /boot/vmlinuz-* > /dev/null 2>&1; then rm -f /boot/vmlinuz-*;
 +        else echo "Missing vmlinuz file." &>/dev/null;
 +fi
 +
-+if ls /boot/kernel* 2>/dev/null; then rm -f /boot/kernel*;
++if ls /boot/kernel* > /dev/null 2>&1; then rm -f /boot/kernel*;
 +        else echo "Installing new kernel." &>/dev/null;
 +fi
 +exit 0
@@ -105,7 +105,7 @@ diff -Naur a/scripts/package/builddeb b/scripts/package/builddeb
 +# remove old linux headers
 +
 +set -e
-+rm -fdr /usr/src/linux-headers-* 2>/dev/null
++rm -fdr /usr/src/linux-headers-* > /dev/null 2>&1
 +exit 0
 +EOT
 +        chmod 755 $kernel_headers_dir/DEBIAN/preinst
