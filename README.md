@@ -26,8 +26,8 @@ Alternatively, you can run the command `make install-depends` in this directory.
 * Install all dependencies
 
 ```sh
-make install-depends        # (cross compile)
-make install-native-depends # (native compile)
+make install-depends        # Cross compile
+make install-native-depends # Native compile)
 ```
 
 * Compile the kernel
@@ -102,9 +102,9 @@ make rpi-all
 #### Root Filesystems
 
 ```sh
-make rootfs   # (arm64)
-make rootfsv7 # (armhf)
-make rootfsv6 # (armel)
+make rootfs   # arm64
+make rootfsv7 # armhf
+make rootfsv6 # armel
 ```
 
 #### Miscellaneous
@@ -123,7 +123,7 @@ make commands
 
 ```sh
 kernel="linux-rpi" # See: https://github.com/raspberrypi/linux
-version="5.4.y"    # Supported: 4.19.y | 5.4.y 
+version="5.4.y"    # Supported: 5.4.y and above
 ```
 
 #### Flicking the switches
