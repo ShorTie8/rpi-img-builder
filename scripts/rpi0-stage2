@@ -57,6 +57,7 @@ mv -f temp-monitor /usr/local/bin/tmon
 mv -f wifiscan /usr/local/bin/
 # Service
 mv -f firstboot.init /etc/init.d/firstboot
+rm -f firstboot.rpi4
 mv -f firstboot /usr/local/sbin/
 chmod +x /usr/local/bin/*
 chmod +x /usr/local/sbin/*
