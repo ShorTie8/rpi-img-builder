@@ -27,7 +27,7 @@ Alternatively, you can run the command `make install-depends` in this directory.
 
 ```sh
 make install-depends        # Cross compile
-make install-native-depends # Native compile)
+make install-native-depends # Native compile
 ```
 
 * Compile the kernel
@@ -144,7 +144,7 @@ MYCONFIG="nameofyour_defconfig"   # place in defconfig directory
 nano ~/.eeprom
 # EEPROM CONFIG
 ## https://archive.raspberrypi.org/debian/pool/main/r/rpi-eeprom/
-EEPROM_VERSION="6.0" # change version number
+EEPROM_VERSION="7.9" # change version number
 ```
 Execute: `deb-eeprom-update`
 
