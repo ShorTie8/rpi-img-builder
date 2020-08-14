@@ -60,6 +60,7 @@ mv -f wifiscan /usr/local/bin/
 mv -f deb-eeprom-update /usr/local/bin/
 # Service
 mv -f firstboot /usr/local/sbin/
+rm -f firstboot.rpi4 /usr/local/sbin/
 mv -f firstboot.init /etc/init.d/firstboot
 mv -f pwrledoff /usr/local/sbin/
 mv -f actledoff /usr/local/sbin/
