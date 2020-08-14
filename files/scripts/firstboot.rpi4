@@ -74,11 +74,11 @@ mount /boot
 
 ### Recreate cmd line
 sleep 1s
-if touch -c /dev/mmcblk0 2>/dev/null; then cmdline_mmcblk;
+if ls /dev/mmcblk0 2>/dev/null; then cmdline_mmcblk;
         else echo "" &>/dev/null;
 fi
 
-if touch -c /dev/mmcblk1 2>/dev/null; then cmdline_mmcblk1;
+if ls /dev/mmcblk1 2>/dev/null; then cmdline_mmcblk1;
         else echo "" &>/dev/null;
 fi
 
