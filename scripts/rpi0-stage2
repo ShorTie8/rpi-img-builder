@@ -60,6 +60,8 @@ mv -f firstboot.init /etc/init.d/firstboot
 mv -f firstboot /usr/local/sbin/
 chmod +x /usr/local/bin/*
 chmod +x /usr/local/sbin/*
+chmod +x /etc/init.d/firstboot
+chown root:root /etc/init.d/firstboot
 chown -R root:root /usr/local/bin/
 chown -R root:root /usr/local/src/
 echo Done.

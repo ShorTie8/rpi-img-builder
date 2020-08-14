@@ -65,6 +65,8 @@ mv -f pwrledoff /usr/local/sbin/
 mv -f actledoff /usr/local/sbin/
 chmod +x /usr/local/bin/*
 chmod +x /usr/local/sbin/*
+chmod +x /etc/init.d/firstboot
+chown root:root /etc/init.d/firstboot
 chown -R root:root /usr/local/bin/
 chown -R root:root /usr/local/sbin/
 chown -R root:root /usr/local/src/
