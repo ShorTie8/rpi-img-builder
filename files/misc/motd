@@ -1,0 +1,7 @@
+
+Execute: run-setup
+
+run-setup will ask and perform the following:
+		Locales, Timezone and Keyboard.
+
+Enjoy!
