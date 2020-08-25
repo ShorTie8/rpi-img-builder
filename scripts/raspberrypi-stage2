@@ -51,8 +51,8 @@ case `grep -Fx "bcm2711" "/root/soc.txt" >/dev/null; echo $?` in
 esac
 mv -f growpart /usr/bin/
 mv -f credentials /usr/local/bin/
-wget -cq --show-progress https://raw.githubusercontent.com/pyavitz/scripts/master/fetch
-mv -f fetch /usr/local/bin/
+wget -cq --show-progress https://raw.githubusercontent.com/pyavitz/scripts/master/fetch.xfce
+mv -f fetch.xfce /usr/local/bin/fetch
 wget -cq --show-progress https://raw.githubusercontent.com/pyavitz/scripts/master/governor
 mv -f governor /usr/local/bin/
 # Service
