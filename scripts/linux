@@ -57,10 +57,10 @@ extract
 
 ### Setup
 if `grep -Fx 'ARM="armv7"' "../userdata.txt" >/dev/null;`
-	then armv7_setup;
+	then armv7_kernel_setup;
 fi
 if `grep -Fx 'ARM="armv8"' "../userdata.txt" >/dev/null;`
-	then armv8_setup;
+	then armv8_kernel_setup;
 fi
 
 ### Patching
