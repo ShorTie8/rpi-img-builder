@@ -102,7 +102,7 @@ armv8_ncompile () {
     make -j${CORES} ARCH=arm64 bindeb-pkg
 }
 
-armv7_setup (){
+armv7_kernel_setup (){
 case `grep -Fx "edge=1" "../userdata.txt" >/dev/null; echo $?` in
   0)
     edgev7_setup
@@ -113,7 +113,7 @@ case `grep -Fx "edge=1" "../userdata.txt" >/dev/null; echo $?` in
 esac
 }
 
-armv8_setup (){
+armv8_kernel_setup (){
 case `grep -Fx "edge=1" "../userdata.txt" >/dev/null; echo $?` in
   0)
     edgev8_setup
