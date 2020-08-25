@@ -104,7 +104,7 @@ Usage: deb-eeprom -opt
 
 ```
 
-#### Using fetch
+#### Using fetch (aarch64 only)
 ```sh
 Fetch, Linux kernel installer for the Raspberry Pi Image Builder
 Usage: fetch -opt
