@@ -104,14 +104,13 @@ Usage: deb-eeprom -opt
 
 ```
 
-#### Using fetch (aarch64 only)
+#### Using fetch
 ```sh
 Fetch, Linux kernel installer for the Raspberry Pi Image Builder
 Usage: fetch -opt
 
-   -1	    Linux 4.19.y LTS
-   -2       Linux 5.4.y LTS
-   -3       Linux Stable Branch
+   -1       Linux 5.4.y LTS
+   -2       Linux Stable Branch
    -u       Update Fetch
    
 fetch -h will list available options and kernel revisions
