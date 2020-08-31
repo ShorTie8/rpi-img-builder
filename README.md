@@ -40,7 +40,7 @@ Username:       # Your username
 Password:       # Your password
 Debian:         # Supported: buster
 Branch:         # Selected kernel branch
-Arm:		# Supported: v7 (armhf) | v8 (arm64)
+Arm:		# Supported: v7 and v8
 Edge Branch:    # 1 for any branch above 5.4.y
 Menuconfig:     # 1 to run kernel menuconfig
 Crosscompile:   # 1 to cross compile | 0 to native compile
@@ -52,6 +52,12 @@ nano userdata.txt
 # place config in defconfig directory
 custom_defconfig=1
 MYCONFIG="nameofyour_defconfig"
+```
+#### User patches
+
+```sh
+Patches "-p1" placed in patches/userpatches are applied during
+compilation. This works for both Foundation and Mainline kernels.
 ```
 #### Miscellaneous
 

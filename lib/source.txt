@@ -4,6 +4,7 @@ DEF="../defconfig"
 PAT="../patches"
 CC="../patches/cc"
 NC="../patches/nc"
+UP="../patches/userpatches"
 
 CORES=`nproc`
 KERNEL="linux-rpi"

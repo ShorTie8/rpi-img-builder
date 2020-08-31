@@ -20,6 +20,15 @@ menuconfig () {
     make menuconfig
 }
 
+userpatches (){
+if
+ls ../${UP}/*.patch > /dev/null 2>&1;
+then echo -e "${GRN}Applying user patches${FIN}." &&
+for i in ../${UP}/*.patch; do patch -p1 < $i; done ;
+else echo -e "${RED}No user patches found${FIN}." 
+fi
+}
+
 # armv7l
 armv7_setup () {
 cd ${KERNEL}-${VERSION}
