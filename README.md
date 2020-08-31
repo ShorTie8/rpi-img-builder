@@ -56,8 +56,7 @@ MYCONFIG="nameofyour_defconfig"
 #### User patches
 
 ```sh
-Patches "-p1" placed in patches/userpatches are applied during
-compilation. This works for both Foundation and Mainline kernels.
+Patches "-p1" placed in patches/userpatches are applied during compilation.
 ```
 #### Miscellaneous
 
