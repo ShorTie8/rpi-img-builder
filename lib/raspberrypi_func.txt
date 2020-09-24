@@ -484,7 +484,7 @@ rm -f *cups_${VERSION}*
 rm -f *source_${VERSION}*
 dpkg -i *.deb
 cd ..
-rm -fdR bluez-${VERSION}
+rm -fdR bluez-${VERSION}-debian-armhf
 apt-mark hold bluez
 echo Done.
 }
@@ -503,7 +503,7 @@ rm -f *cups_${VERSION}*
 rm -f *source_${VERSION}*
 dpkg -i *.deb
 cd ..
-rm -fdR bluez-${VERSION}
+rm -fdR bluez-${VERSION}-debian-arm64
 apt-mark hold bluez
 echo Done.
 }
