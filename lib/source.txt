@@ -31,7 +31,7 @@ XFCE4="xfce4 xinit thunar chromium mousepad gvfs-backends gvfs-fuse \
 FIRMWARE="firmware-linux"
 
 # https://archive.raspberrypi.org/debian/pool/main/r/rpi-eeprom/
-EEPROM_VERSION="8.0"
+EEPROM_VERSION="10.1"
 
 # motd
 BRAND="Raspberry Pi"
