@@ -1,4 +1,5 @@
-## Debian Image Builder for the Raspberry Pi 
+## Depreciated. Currently working on a new branch.
+#### Test images can be found under the release section.
 
 The boards that are currently supported are;
 * Raspberry Pi 4B (bcm2711)
